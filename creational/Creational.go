@@ -13,7 +13,6 @@ type Cook struct {
 type Recipe struct {
 	name string
 	ingredients string
-	timeTaken int
 }
 
 //RecipeMaker interface
