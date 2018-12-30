@@ -35,7 +35,7 @@ func (e *Espresso) SetName() RecipeMaker {
 	return e
 }
 func (e *Espresso) SetIngredients() RecipeMaker {
-	e.Recipe.name = "1 Shot of espresso in an espresso cup"
+	e.Recipe.ingredients = "1 Shot of espresso in an espresso cup"
 	return e
 }
 func (e *Espresso) GetRecipe() Recipe {
@@ -52,7 +52,7 @@ func (e *Cappuccino) SetName() RecipeMaker {
 	return e
 }
 func (e *Cappuccino) SetIngredients() RecipeMaker {
-	e.Recipe.name = "1 Shot of espresso, Steamed Milk, Milk Foam, Sprinkled Chocolate"
+	e.Recipe.ingredients = "1 Shot of espresso, Steamed Milk, Milk Foam, Sprinkled Chocolate"
 	return e
 }
 func (e *Cappuccino) GetRecipe() Recipe {
@@ -68,7 +68,7 @@ func (e *Mocha) SetName() RecipeMaker {
 	return e
 }
 func (e *Mocha) SetIngredients() RecipeMaker {
-	e.Recipe.name = "1 Shot of espresso, 1 Spoon of Chocolate Powder, Steamed Milk, Sprinkled Chocolate"
+	e.Recipe.ingredients = "1 Shot of espresso, 1 Spoon of Chocolate Powder, Steamed Milk, Sprinkled Chocolate"
 	return e
 }
 func (e *Mocha) GetRecipe() Recipe {
@@ -87,7 +87,7 @@ func (c *Cook) SetRecipe(r RecipeMaker) {
 //This is the part where the creational pattern plays its role.
 func (c *Cook) CookIt() {
 	c.recipe.SetName().SetIngredients()
-	fmt.Println("Making a ", c.recipe.GetRecipe().name, " which contains ", c.recipe.GetRecipe().ingredients, "!")
+	fmt.Println("Making a cup of", c.recipe.GetRecipe().name, " which contains ", c.recipe.GetRecipe().ingredients, "!")
 }
 
 //We are taking advantage of the fact that Struct can be returned as Interface if it implements all the methods of that interface
