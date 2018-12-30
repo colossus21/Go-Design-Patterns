@@ -6,7 +6,7 @@ import (
 
 //Let's recreate the shit we have done in the creational pattern
 
-//Factory Method Pattern is self-explanatory
+//Simple Factory Pattern is self-explanatory, you might not want to call it a pattern if you don't want to
 //You have a Factory that returns an Object based on the provided information
 
 type Recipe struct {
