@@ -59,7 +59,7 @@ func main() {
 	Cash := PayByCash{}
 	Customer := Shopper{}
 	Admin := Admin{}
-	
+
 
 	Customer.setPayMethod(&Card)
 	Customer.Pay()
