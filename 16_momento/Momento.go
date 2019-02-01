@@ -20,6 +20,8 @@ type Originator struct {
 	state string
 }
 
+//Originator
+
 func (o *Originator) getState() string {
 	return o.state
 }
@@ -39,6 +41,8 @@ func (o *Originator) restoreFromMemento(m Memento) {
 type Caretaker struct {
 	savedStates []Memento
 }
+
+//Caretaker
 
 func (c *Caretaker) addMemento(m Memento) {
 	fmt.Println("Saved state:",m.getState())
